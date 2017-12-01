@@ -39,11 +39,7 @@ app.controller("EmployeeCtrl", function($scope) {
         }
     ]
     $scope.killEmployee = function(emp) {
+        emp.employmentEnd = Date.now()
 
-        var empIndex = $scope.employees.indexOf(emp);
-
-        if (empIndex >= 0) { //why do we do this?
-            $scope.employees[empIndex].employmentEnd = Date.now()
-        }
         };
   });

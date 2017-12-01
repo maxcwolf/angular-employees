@@ -9,7 +9,7 @@
 <body ng-app="EmployeeMgmt">
     <section ng-controller="EmployeeCtrl">
         <h2>Employee List</h2>
-        <ul ng-repeat="emp in employees | orderBy: '-employmentStart'">
+        <ul ng-repeat="emp in employees | orderBy: 'employmentStart'">
             <li ng-if='emp.employmentEnd === null'>
                 {{emp.firstName}} {{emp.lastName}}
                 <button ng-click="killEmployee(emp)">Kill Employee</button>
